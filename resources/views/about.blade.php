@@ -32,10 +32,15 @@
           <a href="/">Welcome</a> 
                 <h1>About</h1>
 
-                <p>My previous page was {{ URL::previous() }}</p>
+                <p>My previous url page was {{ URL::previous() }}</p>
                 <p>My full URL is  {{ URL::full() }}</p>
 
-                <form action="{{ URL::to('/save_data') }}" method="post"></form>
+                <form action="{{ URL::to('/home') }}" method="post">
+                    <input type="text">
+                   <button type="submit"></button>
+                </form>
+                
         </div>
+
     </body>
 </html>
