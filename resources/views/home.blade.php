@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ URL::current() }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
-
             a:link{
                     margin-right:5em; 
             }
@@ -26,13 +25,10 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen">
-                <h1>URL Generation</h1>
-
-                <a href="/about">about</a> 
-                <a href="/home">Home</a> 
-                <a href="{{ URL::current() }}">Welcome</a> 
-                {{-- gets current url --}}
-                {{ URL::current() }} 
+          <a href="{{ URL::current()}}">Home</a> 
+          <a href="/">Welcome</a> 
+          <a href="/about">about</a> 
+                <h1>Home</h1>
         </div>
     </body>
 </html>

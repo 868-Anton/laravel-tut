@@ -15,24 +15,11 @@ use App\Http\Controllers\UsersController;
 
 
 Route::get('/', function () {
-    // return view('welcome');
-    return redirect('about');
+    return view('welcome');
 });
-
-Route::get('/dynamic{name}', function ($name) {
-    return view('dynamic',['name'=>$name]);
+Route::get('/home', function () {
+    return view('home');
 });
-
-Route::get('/hello', function () {
-    return view('hello');
-});
-
 Route::get('/about', function () {
     return view('about');
 });
-
-// Route::get('users/{user}', [UsersController::class,'sayThis']);
-
-Route::get('users', [UsersController::class,'loadView']);
-
-Route::view("contact",'contact');
