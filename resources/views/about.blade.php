@@ -12,7 +12,7 @@
 
     <div>
         <form action="{{ URL::to('/home') }}" method="post">
-            <input type="text">
+            <input type="text" name="text">
             <button type="submit"></button>
         </form>
                     
