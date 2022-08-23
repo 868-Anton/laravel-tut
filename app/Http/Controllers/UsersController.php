@@ -9,7 +9,12 @@ class UsersController extends Controller
     //
     function viewLoad()
 
-    { //pass data here we are passing an associate array
-        return view('users', ['user'=>"peter"]);
+    { 
+        //dummy data
+        $dummyData = ['Anton','Jack','Josh','Paul','sam'];
+        
+        
+        //pass data here we are passing an associate array
+        return view('users', ['users'=>$dummyData]);
     }
 }
