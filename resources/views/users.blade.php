@@ -24,10 +24,10 @@
             @endif
         </div> --}}
 
-        <div class="flex container ">
+        <div class="flex justify">
         <h3>Using foreach</h3>
         @foreach ($users as $user)
-            <h4>{{ $user }}</h4>
+            <h4>{{ $user }} is a registered user</h4>
         @endforeach
         </div>
 
