@@ -26,3 +26,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/users',[UsersController::class,'viewLoad']);
+
+Route::get('/test', function () {
+    return view('test');
+});

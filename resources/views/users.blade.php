@@ -1,10 +1,10 @@
 <x-header title={{ URL::current() }}/>
 
-        <div class="relative flex items-top justify-center">
-            <h1>Users Page</h1>
+        <div>
+            <h1 class="text-4xl">Users Page</h1>
         </div>
         
-        <h2>Basic Blade Template</h2>
+        <h2 class="text-lg">Basic Blade Template</h2>
 
 
         <h3>Perform logic like Add 20 + 10</h3>
@@ -24,7 +24,7 @@
             @endif
         </div> --}}
 
-        <div class="flex justify">
+        <div>
         <h3>Using foreach</h3>
         @foreach ($users as $user)
             <h4>{{ $user }} is a registered user</h4>
