@@ -32,5 +32,6 @@
             <ul><li><a href="/">Welcome</a></li></ul>
             <ul><li><a href="/home">Home</a></li></ul>
             <ul><li> <a href="/about">about</a></li></ul>
+            <ul><li> <a href="/users">users</a></li></ul>
         </nav>
 
