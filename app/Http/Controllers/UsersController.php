@@ -14,7 +14,7 @@ class UsersController extends Controller
         $dummyData = ['Anton','Jack','Josh','Paul','sam'];
         
         
-        //pass data here we are passing an associate array
+        //pass data to our view file
         return view('users', ['users'=>$dummyData]);
     }
 }

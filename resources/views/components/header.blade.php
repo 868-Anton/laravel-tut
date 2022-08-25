@@ -19,7 +19,6 @@
                 <a href="/">Welcome</a>
               </li>
               <li>
-              <li>
                 <a href="/home">Home</a>
               </li>
               <li>

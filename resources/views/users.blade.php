@@ -23,14 +23,25 @@
             <h3>Hello, Unkown user </h3>
             @endif
         </div> --}}
-
+        
         <div>
-        <h3>Using foreach</h3>
-        @foreach ($users as $user)
-            <h4>{{ $user }} is a registered user</h4>
-        @endforeach
-        </div>
+        @include('inner');
 
+    <h2>Using foreach</h2>
 
+    <h3>Here is a list of auth users.</h3>
 
+    @foreach ($users as $item )
+        <p>{{ $item }}</p>
+    @endforeach
+@csrf
+
+<script>
+    //add Js to PHP
+    var data = @json($users)
+
+    console.log(data)
+    data[0] = 'Mike'
+    console.warn(data)
+</script>
 <x-footer/>
