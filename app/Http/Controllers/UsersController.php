@@ -18,9 +18,10 @@ class UsersController extends Controller
         return view('users', ['users'=>$dummyData]);
     }
 
-    function saySmart()
+    function sayIam()
     {
-        $cool = 'cool';
-        return Blade::render('<h1> Test </h1>',['cool'=>$cool]);
+        $code = '[UserController::class,sayIam]';
+        return Blade::render('<x-header title={{ URL::current() }}/>
+        <h1> I am a function that belongs to the user control, this is some data passed to me: <code>{{$code}}</code></h1> ',['code'=>$code]);
     }
 }
