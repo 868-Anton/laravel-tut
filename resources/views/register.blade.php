@@ -2,7 +2,7 @@
 <x-nav />
 
 <h1 class="mb-5 text-center font-bold" >Fill Out Form</h1>
-
+@csrf
 <form class="w-full max-w-lg ">
   <div class='text-center'>
 
@@ -60,5 +60,6 @@
       </div>
     </div>
   </div>
+  <button type="submit" class="bg-blue-300 rounded-md p-3" >Submit</button>
 </form>
 
