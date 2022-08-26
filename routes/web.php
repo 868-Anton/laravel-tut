@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 /*
@@ -34,4 +35,8 @@ Route::get('/test', function () {
 
 Route::get('/register', function () {
     return view('register');
+});
+
+Route::post('/register', function (Request $req) {
+    return response($req);
 });
