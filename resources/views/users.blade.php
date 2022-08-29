@@ -1,47 +1,25 @@
-<x-header title={{ URL::current() }}/>
-
-        <div>
-            <h1 class="text-4xl">Users Page</h1>
-        </div>
-        
-        <h2 class="text-lg">Basic Blade Template</h2>
-
-
-        <h3>Perform logic like Add 20 + 10</h3>
-        {{ 20+10 }} 
-        
-        
-        
-        {{-- <div class="flex align-content-sm-end">
-            <h3>Using if, else if and else</h3>
-            @if ($user==="Anton")
-            <h3>Hi {{ $user }}</h3>
-            @elseif($user==='sam')
-            <h3>Hi {{ $user }}</h3>
-            <p>data passed in controller 'user'=>'sam' </p>
-            @else
-            <h3>Hello, Unkown user </h3>
-            @endif
-        </div> --}}
-        
-        <div>
-        @include('inner');
-
-    <h2>Using foreach</h2>
-
-    <h3>Here is a list of auth users.</h3>
-
-    @foreach ($users as $item )
-        <p>{{ $item }}</p>
-    @endforeach
-@csrf
-
-<script>
-    //add Js to PHP
-    var data = @json($users)
-
-    console.log(data)
-    data[0] = 'Mike'
-    console.warn(data)
-</script>
-<x-footer/>
+<x-header/>
+  
+{{-- protect user form id from fakers --}}
+<form class= "mt-20 flex flex-col justify-center items-center text-center" action="users" method="POST">
+    @csrf
+    <input 
+    type="text" 
+    name="username" 
+    id="username" 
+    placeholder="enter user id"
+    class="text-xl"
+    />
+    <br>
+    <br>
+    <input 
+    type="password" 
+    name="userpassword" 
+    id="userpassword" 
+    placeholder="enter user password"
+    class="text-xl "
+    /> 
+    <br>
+    <br>
+    <button class="bg-black text-fuchsia-800 rounded p-2 w-16 text-xl" type="submit">Login</button>
+</form>

@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 /*
@@ -21,22 +20,18 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-
 Route::get('/about', function () {
     return view('about');
 });
-
-Route::get('/users',[UsersController::class,'viewLoad']);
-Route::get('/users',[UsersController::class,'sayIAm']);
-
 Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
 
-Route::post('/register', function (Request $req) {
-    return response($req);
-});
+// Exercise Form starts here
+// create view blade 
+// create post route
+Route::post("users",[UsersController::class,'getData']);
+Route::view('/login',"users");
+
+

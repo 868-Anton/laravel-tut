@@ -1,8 +1,4 @@
-{{-- Hi Tailwind here! --}}
-@vite('resources/css/app.css')
-
-{{-- Hi Nav bar here! --}}
-<x-nav />
+<x-header />
 
 {{-- main content --}}
 <main class="grid grid-cols-1  w-auto .h-screen">

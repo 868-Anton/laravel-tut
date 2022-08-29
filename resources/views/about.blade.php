@@ -1,4 +1,4 @@
-<x-header title={{ URL::current() }}/>
+<x-header/>
 
     <div class="relative flex items-top justify-center">
         <h1>About</h1>
