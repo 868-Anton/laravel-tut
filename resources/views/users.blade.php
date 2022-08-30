@@ -1,7 +1,14 @@
 <x-header/>
-  
-{{-- protect user form id from fakers --}}
+
+@if ($errors->any())
+@foreach ($errors->all() as $err)
+    <li>{{ $err }}</li>
+@endforeach
+    
+@endif
+
 <form class= "mt-20 flex flex-col justify-center items-center text-center" action="users" method="POST">
+    {{-- protect user form id from fakers --}}
     @csrf
     <input 
     type="text" 

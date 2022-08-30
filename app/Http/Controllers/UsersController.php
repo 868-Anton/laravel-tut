@@ -11,6 +11,10 @@ class UsersController extends Controller
 
     function getData(Request $req)
     {
-        return $req->input();
+        $req->validate([
+            'username'=>'required',
+            'userpassword'=>'required'
+        ]);
+            return $req->input();
     }
 }
