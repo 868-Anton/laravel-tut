@@ -38,5 +38,5 @@
 
     <br>
     <br>
-    <button class="bg-black text-fuchsia-800 rounded p-2 w-16 text-xl" type="submit">Login</button>
+    <button class="bg-black text-fuchsia-800 rounded p-2 w-16 text-xl hover:text-sky-400" type="submit">Login</button>
 </form>
