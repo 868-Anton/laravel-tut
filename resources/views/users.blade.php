@@ -33,6 +33,7 @@
     placeholder="enter user password"
     class="text-xl border text-center"
     value='{{ old("userpassword") }}'
+    {{-- onchange= "@error('userpassword'){{ $message }} @enderror"  this dont work --}}
     /> 
     <span class="mt-2 text-red-600">@error('userpassword'){{ $message }}@enderror</span>
 
