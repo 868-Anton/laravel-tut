@@ -13,7 +13,7 @@ class UsersController extends Controller
     {
         $req->validate([
             'username'=>'required',
-            'userpassword'=>'required'
+            'userpassword'=>'required | min:3'
         ]);
             return $req->input();
     }
