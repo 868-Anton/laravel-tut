@@ -33,5 +33,6 @@ Route::get('/test', function () {
 // create post route
 Route::post("users",[UsersController::class,'getData']);
 Route::view('/login',"users");
+Route::view('/noaccess',"noaccess");
 
 

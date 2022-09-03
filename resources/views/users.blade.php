@@ -37,6 +37,15 @@
     /> 
     <span class="mt-2 text-red-600">@error('userpassword'){{ $message }}@enderror</span>
 
+    <input 
+    type="text" 
+    name="age" 
+    id="age" 
+    placeholder="enter user age"
+    class="text-xl border text-center"
+    value='{{ old("age") }}'
+    
+    />
     <br>
     <br>
     <button class="bg-black text-fuchsia-800 rounded p-2 w-16 text-xl hover:text-sky-400" type="submit">Login</button>
