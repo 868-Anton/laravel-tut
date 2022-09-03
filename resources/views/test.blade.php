@@ -6,7 +6,7 @@
     <div class="lg:text-center">
       <h2 class="text-lg text-indigo-600 font-semibold">Tests</h2>
       <p class="mt-2 text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl sm:tracking-tight">Here I test STuff</p>
-      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Your age: Youre of the right age over 18</p>
     </div>
 
     <div class="mt-10">

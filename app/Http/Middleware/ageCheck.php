@@ -21,7 +21,11 @@ class ageCheck
         {
             return redirect('noaccess');
         }
-        else redirect('test');
+        if($request->age && $request->age>18)
+        {
+
+            return redirect('test');
+        }
 
 
         return $next($request);
