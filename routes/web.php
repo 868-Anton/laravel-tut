@@ -20,9 +20,13 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+//added routeMiddleware to this page
 Route::get('/about', function () {
     return view('about');
-});
+})->middleware('protectedPage');
+
+
 Route::get('/test', function () {
     return view('test');
 });
