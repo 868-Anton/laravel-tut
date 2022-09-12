@@ -6,8 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-//import User mdoel
-use App\Models\User;
+//import User model
+use App\Models\Students;
 
 
 class UsersController extends Controller
@@ -16,6 +16,6 @@ class UsersController extends Controller
 
     function fetchData()
     {
-       return DB::select('select * from students');
+       return Students::all();
     }
 }
