@@ -17,26 +17,5 @@ use App\Http\Controllers\UsersController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home', function () {
-    return view('home');
-});
 
-//added routeMiddleware to this page
-Route::get('/about', function () {
-    return view('about');
-})->middleware('protectedPage');
-
-
-Route::get('/test', function () {
-    return view('test');
-});
-
-
-// Exercise Form starts here
-// create view blade 
-// create post route
-Route::post("users",[UsersController::class,'getData']);
-Route::view('/login',"users");
-Route::view('/noaccess',"noaccess");
-
-
+Route::get('users',[UsersController::class,'index']);

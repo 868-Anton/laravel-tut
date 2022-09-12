@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 
 class UsersController extends Controller
 {
     // 
 
-    function getData(Request $req)
+    function index()
     {
-        $req->validate([
-            'username'=>'required',
-            'userpassword'=>'required | min:3'
-        ]);
-            return $req->input();
+       return DB::select('select * from users');
     }
 }
