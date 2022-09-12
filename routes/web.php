@@ -30,7 +30,7 @@ Route::post("users",[UsersController::class,'getData']);
 Route::view('/noaccess',"noaccess");
 Route::view('/login',"users");
 
-//creating a group middleware on routes
+//creating a group middleware on routes just pass in the array to add multiple 
 Route::group(['middleware'=>['protectedPage']],function()
 {
     Route::get('/', function () {
