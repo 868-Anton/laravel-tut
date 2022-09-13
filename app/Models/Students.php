@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Students extends Model
 {
     use HasFactory;
-    // public $table = 'todos'; manaually fetch data from any table from DB
+    // public $table = 'todos'; manually fetch data from any table from DB
 }
