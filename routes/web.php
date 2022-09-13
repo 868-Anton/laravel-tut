@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('students',[UsersController::class,'fetchData']);
+Route::get('apiData',[UsersController::class,'index']);
