@@ -6,16 +6,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-//import User model
-use App\Models\Students;
+//import http
+use Illuminate\Support\Facades\Http;
+
 
 
 class UsersController extends Controller
 {
-    //fetch Data from my SQL
+    //get(data from this api)
 
-    function fetchData()
+    function index()
     {
-       return Students::all();
+    $collection = Http::get('reqres.in/api/users?page=1');
+    return view('Http',['collection'=>$collection['data']]);
     }
 }
