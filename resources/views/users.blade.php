@@ -8,7 +8,7 @@
         @endif --}}
 
 
-<form class= "mt-20 flex flex-col justify-center items-center text-center" action="users" method="POST">
+<form class= "mt-20 flex flex-col justify-center items-center text-center" action="user" method="POST">
     {{-- protect user form id from fakers --}}
     @csrf
     {{-- {{ method_field('PUT') }} --}}
