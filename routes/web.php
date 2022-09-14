@@ -28,9 +28,10 @@ Route::get('/test', function () {
 });
 
 
-//sessions
+//sessions lessons begin here
 Route::post("user",[UserAuth::class,'userLogin']);
 // Route::view('/login',"users");
+
 Route::view('/profile',"profile");
 
 //create Login and logout 
