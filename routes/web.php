@@ -29,7 +29,7 @@ Route::get('/test', function () {
 
 
 //sessions lessons begin here
-Route::post("user",[UserAuth::class,'userLogin']);
+Route::post("login",[UserAuth::class,'userLogin']); //this must match form 
 // Route::view('/login',"users");
 
 Route::view('/profile',"profile");
@@ -40,7 +40,7 @@ Route::get('/login', function () {
     {
         return redirect('profile');
     }
-    return view('/users');
+    return view('/login');
 });
 
 Route::get('/logout', function () {
