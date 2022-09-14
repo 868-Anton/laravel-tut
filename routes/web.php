@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsersController;
+use App\Http\Controllers\UserAuth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,10 +28,25 @@ Route::get('/test', function () {
 });
 
 
-// Exercise Form starts here
-// create view blade 
-// create post route
-Route::post("users",[UsersController::class,'getData']);
+//sessions
+Route::post("user",[UserAuth::class,'userLogin']);
 Route::view('/login',"users");
 
+Route::view('/profile',"profile");
 
+//create Login and logout 
+// Route::get('/login', function () {
+//     if(session()->has('username'))
+//     {
+//         return redirect('profile');
+//     }
+//     return view('login');
+// });
+
+Route::get('/logout', function () {
+    if(session()->has('username'))
+    {
+        session()->pull('username');
+    }
+    return redirect('login');
+});
