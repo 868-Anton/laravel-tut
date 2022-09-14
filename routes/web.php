@@ -30,18 +30,17 @@ Route::get('/test', function () {
 
 //sessions
 Route::post("user",[UserAuth::class,'userLogin']);
-Route::view('/login',"users");
-
+// Route::view('/login',"users");
 Route::view('/profile',"profile");
 
 //create Login and logout 
-// Route::get('/login', function () {
-//     if(session()->has('username'))
-//     {
-//         return redirect('profile');
-//     }
-//     return view('login');
-// });
+Route::get('/login', function () {
+    if(session()->has('username'))
+    {
+        return redirect('profile');
+    }
+    return view('/users');
+});
 
 Route::get('/logout', function () {
     if(session()->has('username'))
