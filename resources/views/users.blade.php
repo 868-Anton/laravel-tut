@@ -11,6 +11,7 @@
 <form class= "mt-20 flex flex-col justify-center items-center text-center" action="users" method="POST">
     {{-- protect user form id from fakers --}}
     @csrf
+    {{-- {{ method_field('PUT') }} --}}
     <input 
     type="text" 
     name="username" 
