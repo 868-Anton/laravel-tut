@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\AddMember;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,8 @@ use App\Http\Controllers\UserAuth;
 */
 
 
-Route::get('/', function () {
+Route::get('/', function () 
+{
     return view('welcome');
 });
 Route::get('/home', function () {
@@ -31,8 +32,12 @@ Route::get('/test', function () {
 //sessions lessons begin here
 Route::post("login",[UserAuth::class,'userLogin']); //this must match form 
 // Route::view('/login',"users");
-
 Route::view('/profile',"profile");
+
+//session flash begins here 
+Route::post('addMember', [AddMember::class,'add']);
+Route::view("add", 'add');
+
 
 //create Login and logout 
 Route::get('/login', function () {
@@ -50,3 +55,5 @@ Route::get('/logout', function () {
     }
     return redirect('login');
 });
+
+
