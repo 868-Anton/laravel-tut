@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddMember;
+use App\Http\Controllers\UploadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,4 +57,5 @@ Route::get('/logout', function () {
     return redirect('login');
 });
 
-
+Route::view('/upload','upload');
+Route::post('/upload',[UploadController::class,'uploadFile']);
