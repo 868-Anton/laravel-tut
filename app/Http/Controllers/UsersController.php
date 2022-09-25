@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\player;
 use Illuminate\Http\Request;
 
 
@@ -17,4 +18,12 @@ class UsersController extends Controller
         ]);
             return $req->input();
     }
+    
+    function fetchTable()
+    {
+       $data = player::all();
+
+       return view('players',['players'=>$data]);
+       
+    } 
 }
