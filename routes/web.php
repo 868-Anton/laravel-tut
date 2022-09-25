@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddMember;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,3 +60,5 @@ Route::get('/logout', function () {
 
 Route::view('/upload','upload');
 Route::post('/upload',[UploadController::class,'uploadFile']);
+
+Route::get("players",[UsersController::class,"fetch"]);
