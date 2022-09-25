@@ -61,4 +61,4 @@ Route::get('/logout', function () {
 Route::view('/upload','upload');
 Route::post('/upload',[UploadController::class,'uploadFile']);
 
-Route::get("players",[UsersController::class,"fetch"]);
+Route::get("players",[UsersController::class,"fetchTable"]);
