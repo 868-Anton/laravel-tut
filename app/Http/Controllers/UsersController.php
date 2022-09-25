@@ -21,7 +21,7 @@ class UsersController extends Controller
     
     function fetchTable()
     {
-       $data = player::all();
+       $data = player::paginate(10);
 
        return view('players',['players'=>$data]);
        
