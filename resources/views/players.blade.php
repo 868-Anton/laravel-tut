@@ -25,3 +25,14 @@
     @endforeach
   </tbody>
 </table>
+
+<span class = "mt-10 flex">
+  {{ $players->links() }}
+</span>
+
+<style>
+  width: 25px; 
+  .w-5{
+    display: none;
+  }
+</style>
