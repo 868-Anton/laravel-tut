@@ -4,33 +4,38 @@
 <main class="grid grid-cols-1  w-auto .h-screen">
 
   {{-- page title col-1--}}
-  <h1 class="mt-5 text-center text-gray-500 text-6xl semi-bold col-span-3 uppercase " >Fill Out Form</h1>
+  <h1 class="mt-5 text-center text-gray-500 text-6xl semi-bold col-span-3 uppercase " >Add Player</h1>
     
-  {{-- protect user form id from fakers --}}
-  @csrf
-
+  
   {{-- form --}}
-  <form class="text-4xl mt-20 mx-20">
-
+  <form class="text-4xl mt-20 mx-20" action="register" method="POST">
+    
+    {{-- protect user form id from fakers --}}
+    @csrf
     {{-- wrapper --}}
     <div>
       
       {{-- subwrapper --}}
       <div class="flex flex-wrap -mx-3 mb-6">
 
-        <div class="w-full md:w-1/2   px-3 ">
+        <div class="w-full md:w-1/2 px-3 ">
+
           <label class="block uppercase tracking-wide  text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-            First Name
+            Username
           </label>
-          <input type="text" name="firstname" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+
+          <input type="text" name="Username" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="Username" type="text" placeholder="Jane">
+
           <p class="text-red-500 text-xs italic">Please fill out this field.</p>
         </div>
 
         <div class="w-full md:w-1/2   px-3">
-          <label type="text" name="lastname" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-            Last Name
+
+          <label type="text"  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+            Online-Name
           </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" name="onlineName" type="text" placeholder="PSN">
         </div>
 
 
@@ -43,10 +48,10 @@
 
         <div class="w-full px-3">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-            Password
+            Phone Number
           </label>
 
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" name= "password" placeholder="******************">
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="phone" type="text" name= "phoneNumber" placeholder="8687227219">
 
           <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
         </div>
@@ -57,40 +62,35 @@
       <div class="flex flex-wrap -mx-3 mb-2">
         
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-            City
+            FullName
           </label>
           
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="full-name" type="text" placeholder="Anton" name="fullName">
         </div>
         
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
           
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-            State
+            Divison 
           </label>
+          
           <div class="relative">
-            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-              <option>New Mexico</option>
-              <option>Missouri</option>
-              <option>Texas</option>
+            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="division" name="division">
+              <option>Division 1</option>
+              <option>Division 2</option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
             </div>
           </div>
         </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-            Zip
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
-        </div>
       </div>
     </div>
 
 {{-- child of form 2 ?should the button be a child --}}
-    <button type="submit" class="bg-blue-300 rounded-md p-3 mb-2 w-full" >Submit</button>
+    <button type="submit" class="bg-blue-300 rounded-md p-3 mb-2 w-full" >Add player</button>
   </form>
 
 </main>
