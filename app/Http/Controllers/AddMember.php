@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\player;
 use Illuminate\Http\Request;
+
 
 class AddMember extends Controller
 {
@@ -10,17 +12,22 @@ class AddMember extends Controller
     function add(Request $req)
     {
         $req->validate([
-            'username'=>'required',
-            'userpassword'=>'required | min:3',
-            'email'=>'required',
+            'Username'=>'required',
+            'onlineName'=>'required',
         ]);
 
-        $data =  $req->input('username'); 
+        $player = new player;
 
-        //flash session begins here
-        $req->session()->flash('user',$data);
-        
-        return redirect('add');
+        $player->Username= $req->Username;
+        $player->onlineName = $req->onlineName;
+        $player->phoneNumber= $req->phoneNumber;
+        $player->fullName= $req->fullName;
+        $player->Divsion= $req->division;
+
+        $player->save();
+
+        return redirect('players',);
+
 
     }
 }
