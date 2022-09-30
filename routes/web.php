@@ -31,6 +31,8 @@ Route::get('/test', function () {
 });
 
 
+
+
 //sessions lessons begin here
 Route::post("login",[UserAuth::class,'userLogin']); //this must match form 
 // Route::view('/login',"users");
@@ -62,3 +64,9 @@ Route::view('/upload','upload');
 Route::post('/upload',[UploadController::class,'uploadFile']);
 
 Route::get("players",[UsersController::class,"fetchTable"]);
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::post('register',[AddMember::class,'add']);
