@@ -26,7 +26,7 @@ class AddMember extends Controller
 
         $player->save();
 
-        return redirect('players',);
+        return redirect('players');
 
 
     }
