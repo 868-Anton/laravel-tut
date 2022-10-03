@@ -21,6 +21,7 @@
       <td>{{ $player['phoneNumber'] }}</td>
       <td>{{ $player['fullName'] }}</td>
       <td>{{ $player['Divsion'] }}</td>
+      <td><a href={{'delete/'. $player['Id'] }}>Delete</a></td>
     </tr>
     @endforeach
   </tbody>
