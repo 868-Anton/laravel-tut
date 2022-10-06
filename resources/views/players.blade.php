@@ -11,6 +11,7 @@
       <th>Phone Number</th>
       <th>Full Name</th>
       <th>Division</th>
+      <th>Operation</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,10 @@
       <td>{{ $player['phoneNumber'] }}</td>
       <td>{{ $player['fullName'] }}</td>
       <td>{{ $player['Divsion'] }}</td>
+      <td>
+        <a href={{ 'delete/'.$player['Id'] }}>Delete</a>
+        <a href={{ 'edit/'.$player['Id'] }}>Edit</a>
+      </td>
     </tr>
     @endforeach
   </tbody>

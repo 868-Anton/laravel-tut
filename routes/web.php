@@ -62,3 +62,6 @@ Route::view('/upload','upload');
 Route::post('/upload',[UploadController::class,'uploadFile']);
 
 Route::get("players",[UsersController::class,"fetchTable"]);
+Route::get("delete/{Id}",[UsersController::class,"delete"]);
+Route::get("edit/{Id}",[UsersController::class,"showData"]);
+Route::post("edit",[UsersController::class,"update"]);
