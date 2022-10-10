@@ -43,20 +43,13 @@ class UsersController extends Controller
 
     function update(Request $req)
     {
-      try{
-       print_r($req); 
-       exit();
-       $data = player::find($req->Id);
-        $data->Username = $req->Username;
-        $data->onlineName = $req->onlineName;
-        $data->phoneNumber = $req->phoneNumber;
-        $data->fullName = $req->fullName;
-        $data->Divsion = $req->Divsion;
+       $data = player::find($req->id);
+        $data->userName == $req->userName;
+        $data->onlineName == $req->onlineName;
+        $data->phoneNumber == $req->phoneNumber;
+        $data->fullName == $req->fullName;
+        $data->Division == $req->Division;
         $data->save();
-        // return redirect('players');
-        }
-        catch(Exception $e){
-            echo $e->getMessage();
-        }
+        return redirect('players');
     }
 }

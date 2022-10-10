@@ -17,14 +17,14 @@
   <tbody>
     @foreach ($players as $player ) 
     <tr>
-      <td>{{ $player['Username'] }}</td>
+      <td>{{ $player['userName'] }}</td>
       <td>{{ $player['onlineName'] }}</td>
       <td>{{ $player['phoneNumber'] }}</td>
       <td>{{ $player['fullName'] }}</td>
-      <td>{{ $player['Divsion'] }}</td>
+      <td>{{ $player['Division'] }}</td>
       <td>
-        <a href={{ 'delete/'.$player['Id'] }}>Delete</a>
-        <a href={{ 'edit/'.$player['Id'] }}>Edit</a>
+        <a href={{ 'delete/'.$player['id'] }}>Delete</a>
+        <a href={{ 'edit/'.$player['id'] }}>Edit</a>
       </td>
     </tr>
     @endforeach
